@@ -8,26 +8,28 @@ import Foundation
 /// Given a number it will return the n-th number in the Fibonacci sequence.
 ///
 /// - Parameter number: The position of the sequence you're looking for. (i.e. 8th Place)
-/// - Returns: Returns the value in that position. (i.e. 8th place is 13.)
-func fibonacci(number: Int) -> Int {
-    <#Add Code here#>
+/// - Returns: Returns the value in that position. (i.e. 8th place is 21.)
+func fibonacci(_ number: Int) -> Int {
+    <#...#>
     return 0
 }
 
 //: ---
-import XCTest
 
-
-
-func testinputs() {
-    XCTAssertEqual(fibonacci(number: 2), 1, "Value at position 2 is incorrect.")
-    XCTAssertEqual(fibonacci(number: 0), 0, "Value at position 0 is incorrect.")
-    XCTAssertEqual(fibonacci(number: 9), 34, "Value at position 9 is incorrect.")
-    XCTAssertEqual(fibonacci(number: 13), 144, "Value at position 13 is incorrect.")
-    XCTAssertEqual(fibonacci(number: 1), 1, "Value at position 1 is incorrect.")
+func testInputs() {
+    let fibNumbers = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+    for n in 0..<fibNumbers.count {
+        let value = fibonacci(n)
+        if value == fibNumbers[n] {
+            print("The value for element \(n) = \(value)")
+        } else {
+            print("!!!!!The value for element \(n) is incorrect!!!!!")
+        }
+    }
 }
 
-testinputs()
+testInputs()
+
 
 
 
